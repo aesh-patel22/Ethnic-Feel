@@ -1,0 +1,323 @@
+
+ <style>
+     oiute;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 10;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      background-color: beige;
+      color: black;
+      transition: background-color 0.4s, color 0.4s;
+	  justify-content:center;
+	  backdrop-filter: blur(0px);
+    }
+
+    nav:hover {
+  background-color: beige; /* Deep pink with transparency */
+  backdrop-filter: blur(15px);
+  color: black;
+    }
+
+    nav:hover .logo,
+nav:hover .nav-links a,
+nav:hover .search-icon,
+header:hover .search-box,
+nav:hover .icons i,
+nav:hover .search-box::placeholder {
+  color: black !important;
+}
+
+nav:hover .search-box {
+  background: rgba(255, 255, 255, 0.7);
+  color: black;
+}
+
+/* Optional: Ensure input caret and text typed are visible */
+.search-box {
+  caret-color: black;
+}
+	.main-header {
+  width: 100%;
+  padding: 12px 40px;
+  background: transperant;
+}
+
+	.header-container {
+	  display: flex;
+	  justify-content: space-between;
+	  align-items: center;
+	  flex-wrap: wrap;
+	  max-width: 1440px;
+	  margin:auto;
+	   grid-template-columns: 1fr auto 1fr;
+	}
+  .main-header .icons a:hover{
+    color:black;
+  }
+.main-header:hover .icons a {
+    color: black; /* Change icon color to pink on header hover */
+}
+	.logo1 {
+	  display: flex;
+	  align-items: center;
+	  gap: 10px;
+	  font-weight: bold;
+	  font-size: 24px;
+	  letter-spacing: 1px;
+	  color: #F5F5DC;
+	  transition: all 0.3s ease;
+	  height: 60px;
+    color:black;
+	}
+	.logo-images {
+  width: 50px;
+  height: 60px;
+  position: relative;
+}
+
+.logo-images .main-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: filter 0.4s ease;
+}
+	.header-right {
+	  display: flex;
+	  align-items: center;
+	  gap: 1.5rem;
+	  margin:10px;
+    justify-self:end;
+	}
+	.search-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+	.search-box {
+	  padding: 8px 12px 8px 34px;
+  font-size: 14px;
+  border: none;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  outline: none;
+  color:black;
+  width:160px;
+  z-index:1;
+}
+	.search-icon {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  color: black;
+  font-size: 16px;
+  z-index:2;
+}
+	.icons{
+		display:flex;
+		gap:15px;
+	}
+	.icons i {
+	  font-size: 18px;
+	  cursor: pointer;
+	  color: black;
+	}
+   .icons a {
+            color: black;
+            transition: color 0.2s ease-in-out;
+        }
+
+	/* Stacked images container */
+	
+
+
+
+	header:hover .logo-hover {
+	  opacity: 1;
+	}
+
+	header:hover .logo-default {
+	  opacity: 0;
+	}
+
+	/* Brand name style */
+/* This is the main container for the navigation links */
+.nav-links {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-bottom: 1px solid #ccc; /* Add a bottom border to the entire nav bar */
+  color:black;
+}
+
+/* This is the container for each individual category link */
+.nav-links li {
+  position: relative; /* This is important for positioning the underline */
+  padding: 10px 15px; /* Adjust padding as needed */
+  cursor: pointer;
+}
+
+/* This is the link itself */
+.nav-links a {
+  text-decoration: none;
+  color: black; /* The default color of the text */
+  font-weight: 500;
+  font-size: 14px;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+/* This is the underline that appears on hover */
+.nav-links li::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px; /* Thickness of the underline */
+  background-color: transparent; /* Initially, it's transparent */
+  transition: background-color 0.3s ease;
+}
+
+/* This is the hover effect. The underline becomes visible. */
+.nav-links li:hover::after,
+.nav-links li.active::after {
+  background-color: black; /* Color of the underline on hover */
+}
+
+/* You can also change the text color on hover */
+.nav-links li:hover a,
+.nav-links li.active a {
+  color: beige;
+}
+
+/* Optional: To indicate the active/current page */
+.nav-links li.active a {
+  font-weight: bold; /* Make the active link bold */
+}
+ .sub-categories {
+            flex: 1;
+            color:black;
+        }
+
+        .sub-categories h4 {
+            font-size: 1.3em;
+            font-weight: normal;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #dcdcdc;
+            padding-bottom: 5px;
+            color:black;
+        }
+
+        .sub-categories ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .sub-categories ul li a {
+            text-decoration: none;
+            color: #555;
+            display: block;
+            padding: 8px 0;
+            font-size:1.1em;
+            font-family: Trebuchet MS, sans-serif;
+        }
+        .sub-categories ul li {
+  border-bottom: none;
+}
+        
+
+         .image-gallery {
+            /* Increased flex to make the image gallery take up more space */
+            flex: 3;
+            display: flex;
+            gap: 30px;
+            justify-content: space-between; /* Spreads the images out */
+        }
+        .image-item {
+            text-align: center;
+        }
+        
+        .image-item img {
+            max-width: 100%; /* Keep this to ensure responsiveness */
+            height: auto; /* Keep this to maintain aspect ratio */
+            display: block;
+            /* Add or adjust these properties to change the size */
+            width: 250px; /* Example: set a specific width */
+            height: 350px; /* Example: set a specific height */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .image-item img:hover {
+            transform: scale(1.03);
+        }
+        
+        .image-item p {
+            margin-top: 10px;
+            font-size: 1em;
+            color: #555;
+            text-transform: uppercase;
+            font-family: Trebuchet MS, sans-serif;
+        }
+                .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 150vw;
+            background-color: beige;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            z-index: 1000;
+            text-align: left;
+            padding: 40px;
+            box-sizing: border-box;
+        }
+
+        .nav-links li:hover .dropdown-menu {
+            display: block;
+        }
+        .dropdown-content {
+            display: flex;
+            /* Changed to space-between to spread content and cover the available space */
+            justify-content: space-between; 
+            max-width: 1500px;
+            margin: 0 auto;
+            gap: 40px;
+        }
+            body {
+            font-family: 'Inter', sans-serif;
+            background-color: beige;
+        }
+        .wishlist-icon {
+            transition: transform 0.2s ease-in-out;
+        }
+        .wishlist-icon:hover {
+            transform: scale(1.1);
+        }
+        .product-image {
+            width: 100%; 
+            height: 350px; /* Giving a fixed height for consistency */
+            object-fit: cover;
+            transition: transform 0.5s ease-in-out;
+        }
+</style>
